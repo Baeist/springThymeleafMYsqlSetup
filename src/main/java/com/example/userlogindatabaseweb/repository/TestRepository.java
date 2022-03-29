@@ -6,16 +6,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@Repository                         // assign this as out repository class for spring
+@Repository                         // assign this as our repository class for spring
 public class TestRepository {
 
-    private String DBurl = "jdbc:mysql://localhost:3306/sampledb"; // db url
-    private String userName = "root";   // user
-    private String password = "8089";   // password
+    private String DBurl = "jdbc:mysql://localhost:3306/sampledb"; // db url, change to your own
+    private String userName = "root";   // user in db, change to your own
+    private String password = "root";   // password, change to your own
 
     private Connection connection;
 
-    // constructor that includes setting up the connection
+    /* constructor that includes setting up the connection,
+     has to be instantiated or the method called somewhere(f.ex. in the main method running in UserLogInDatabaseWebApplication) */
     TestRepository(){
         setConnection();
     }

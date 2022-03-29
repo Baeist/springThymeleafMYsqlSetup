@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller                         // notifies Spring this is our controller
 public class TestController {
 
-    // below codeblock lets spring controller know about the repository
+    // the 2 lines below, let spring controller know about the repository
     TestRepository repository;
     public TestController(TestRepository repo){
         this.repository = repo;
@@ -17,7 +17,7 @@ public class TestController {
 
     // setup for localhost:8080/start
     @GetMapping("/start")
-    public String start(Model model){
+    public String start(Model model){       // model is used when using thymeleaf to access variable values, it does nothing here
         return "start";
     }
 
